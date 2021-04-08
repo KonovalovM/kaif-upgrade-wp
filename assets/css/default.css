@@ -1,0 +1,233 @@
+/* ------------------------------------------------------------------ */
+/* a. Webfonts and Icon fonts
+ ------------------------------------------------------------------ */
+
+@import url("fonts.css");
+/*@import url("fontawesome-free-5.15.3-web/css/fontawesome.min.css");*/
+/* ------------------------------------------------------------------
+/* b. Reset
+      Adapted from:
+      Normalize.css - https://github.com/necolas/normalize.css/
+      HTML5 Doctor Reset - html5doctor.com/html-5-reset-stylesheet/
+/* ------------------------------------------------------------------ */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   font-size: 100%;
+   vertical-align: baseline;
+   background: transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+   display: block;
+}
+
+audio,
+canvas,
+video {
+   display: inline-block;
+}
+
+audio:not([controls]) {
+   display: none;
+   height: 0;
+}
+
+[hidden] { display: none; }
+
+code, kbd, pre, samp {
+   font-family: monospace, serif;
+   font-size: 1em;
+}
+
+pre {
+   white-space: pre;
+   white-space: pre-wrap;
+   word-wrap: break-word;
+}
+
+blockquote, q { quotes: &#8220 &#8220; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+
+ins {
+   background-color: #ff9;
+   color: #000;
+   text-decoration: none;
+}
+
+mark {
+   background-color: #A7F4F6;
+   color: #555;
+}
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+   border-bottom: 1px dotted;
+   cursor: help;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+/*  3. Links  ------------------------------------------------------- */
+
+a, a:visited {
+   text-decoration: none;
+   outline: 0;
+   color: #FFFFFF;
+
+   -webkit-transition: color .3s ease-in-out;
+   -moz-transition: color .3s ease-in-out;
+   -o-transition: color .3s ease-in-out;
+   transition: color .3s ease-in-out;
+}
+a:hover, a:focus { color: #313131; }
+p a, p a:visited { line-height: inherit; }
+
+
+/*  4. List  --------------------------------------------------------- */
+
+ul, ol { margin-bottom: 24px; margin-top: 12px; }
+ul { list-style: none outside; }
+ol { list-style: decimal; }
+ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+ul.square { list-style: square outside; }
+ul.circle { list-style: circle outside; }
+ul.disc { list-style: disc outside; }
+ul ul, ul ol,
+ol ol, ol ul { margin: 6px 0 6px 30px; }
+ul ul li, ul ol li,
+ol ol li, ol ul li { margin-bottom: 6px; }
+li { line-height: 18px; margin-bottom: 12px; list-style-type: none;}
+ul.large li { }
+li p { }
+
+
+/*  5. Images  --------------------------------------------------------- */
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+img.pull-right { margin: 12px 0px 0px 18px; }
+img.pull-left { margin: 12px 18px 0px 0px; }
+
+/*  6. Buttons  --------------------------------------------------------- */
+
+.button,
+.button:visited,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+   font: 16px/30px notosans-bold, sans-serif;
+   background: #000000;
+   display: inline-block;
+	text-decoration: none;
+   letter-spacing: 0;
+   color: #fff;
+	padding: 12px 24px;
+	margin-bottom: 18px;
+    border: 1px solid white;
+   cursor: pointer;
+   height: auto;
+
+   -webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   -khtml-border-radius: 3px;
+   border-radius: 3px;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+   background: #3d4145;
+   color: #fff;
+}
+
+.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
+   background: #3d4145;
+   color: #fff;
+}
+
+.button.full-width,
+button.full-width,
+input[type="submit"].full-width,
+input[type="reset"].full-width,
+input[type="button"].full-width {
+	width: 100%;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	text-align: center;
+}
+
+/* Fix for odd Mozilla border & padding issues */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*arrow*/
+.arrow-1 {
+    cursor: pointer;
+    position: relative;
+    width: 80px;
+    height: 50px;
+    margin: 20px;
+}
+.arrow-1 div {
+    position: relative;
+    width: 90px;
+    height: 20px;
+    background-color: #FFFFFF;
+    left:0;
+    display: block;
+}
+.arrow-1 div::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 46px solid #FFFFFF;
+    top: -15px;
+    left: 80px;
+}
+
