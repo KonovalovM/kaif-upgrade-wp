@@ -31,8 +31,8 @@
 
             <ul class="footer-social">
                 <li><a href="https://www.instagram.com/kaif_upgrade/"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa fa-telegram"></i></a></li>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://t.me/kaifupgrade"><i class="fa fa-telegram"></i></a></li>
+                <li><a href="https://www.facebook.com/kaifhookah"><i class="fa fa-facebook"></i></a></li>
             </ul>
         </div>
             <ul class="copyright">

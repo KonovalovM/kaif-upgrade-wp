@@ -1,39 +1,46 @@
 <?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package kaif
- */
 
-//get_header();
 wp_head();
 ?>
     <section id="main-section">
-        <img class="fon" src="<?php echo get_template_directory_uri(); ?>/assets/images//main.jpg);" alt="" />
-        <div class="main-menu">
+        <div class="contact-mobile">
+            <ul><a href="#"><i class="fa fa-mobile"></i></a> +380 73 722 1244</ul>
+            <ul><a href="#"><i class="fa fa-location-arrow"></i></a> вул.Оводова 32/8</ul>
+        </div>
+
+        <div class="main-menu" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/main.jpg);">
+
             <ul class="menu-text">FRIENDLY SPECIALITY PLACE</ul>
             <ul class="main-name">
-                <li style="font-size: 106px; ">KAIF</li>
-                <li style="font-size: 46px;">UPGRADE</li>
+                <li id="kaif">KAIF</li>
+                <li id="upgrate">UPGRADE</li>
             </ul>
-            <ul>У НАС ПОТУЖНА ВЕНТИЛЯЦІЙНА СИСТЕМА
+            <ul id="main-text">У НАС ПОТУЖНА ВЕНТИЛЯЦІЙНА СИСТЕМА
                 <br>І ОДЯГ ЗОВСІМ НЕ ПАХНЕ</ul>
             <div class="">
                 <a href=tel:88005553535 class="button" id="main-button">Замовити столик</a>
             </div>
             <ul class="main-social" style="font-size: x-large;">
                 <li><a href="https://www.instagram.com/kaif_upgrade/"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa fa-telegram"></i></a></li>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://t.me/kaifupgrade"><i class="fa fa-telegram"></i></a></li>
+                <li><a href="https://www.facebook.com/kaifhookah"><i class="fa fa-facebook"></i></a></li>
             </ul>
+
         </div>
+
+        <div class="main-mobile">
+            <div id="main-div-button">
+                <a href=tel:88005553535 class="button" id="main-button-mobile">Замовити столик</a>
+            </div>
+            <div>
+                <ul class="main-social-mobile">
+                    <li><a href="https://www.instagram.com/kaif_upgrade/"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://t.me/kaifupgrade"><i class="fa fa-telegram"></i></a></li>
+                    <li><a href="https://www.facebook.com/kaifhookah"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
     </section>
     <!-- Gallery Section
        ================================================== -->
@@ -41,18 +48,17 @@ wp_head();
 
         <div class="gallery">
             <ul>ПАРУ СВІТЛИН</ul>
-            <div class="row">
-                <div class="gallery-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/1.png);" alt="" />
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/2.png);" alt="" />
-                </div>
-                <div class="gallery-image-second">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/3.png);" alt="" />
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/4.png);" alt="" />
+            <div class="gallery-row">
+                <div class="gallery-image" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/gallery/1.png);"></div>
+                <div class="gallery-image" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/gallery/2.png);"></div>
+                <div class="gallery-row-image">
+                    <div class="gallery-image-s" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/gallery/3.png);"></div>
+                    <div class="gallery-image-s" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/gallery/4.png);"></div>
                 </div>
             </div>
-            <div class="gallery-image-third">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/5.png);" alt="" />
+            <div class="gallery-row-second">
+                <div class="gallery-image-t" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/gallery/5.png);"></div>
+
                 <div>
                     <li><a href="https://www.instagram.com/kaif_upgrade/"><i class="fa fa-instagram"></i></a></li>
                     <li style="font-size: 18px;">
@@ -62,17 +68,16 @@ wp_head();
                     <li style="font-size: 14px;">#кайфуйукайфі</li>
                 </div>
             </div>
-
         </div>
 
     </section>
     <!-- Section End-->
-
     <!-- Menu-button Section
     ================================================== -->
     <section>
         <div class="menu-button">
-            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu.jpg);" alt="" /></a>
+            <a href="#" id="menu-button-pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu.jpg);" alt="" /></a>
+            <div id="menu-button-mobile" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/menus.png);"></div>
         </div>
     </section>
     <!-- Info Section End-->
@@ -116,10 +121,6 @@ wp_head();
                         </p>
                         <h1 class="blog-title"><a href="<?php the_permalink(); ?>" title=""><?php the_title(); ?></a></h1>
                     </div>
-<!--
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/menu2.png);" alt="" />
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/menu3.png);" alt="" />
--->
                 </div>
             </div>
             <div class="">
@@ -134,15 +135,15 @@ wp_head();
     <section>
         <div class="order-menu">
             <div>
-                <ul id="go">GO ДО НАС</ul>
-                <ul>Забронюй собі
+                <ul id="order-go">GO ДО НАС</ul>
+                <ul id="order-text">Забронюй собі
                     <br>місце, ми про тебе подбаємо!</ul>
             </div>
             <div class="arrow-1">
                 <div></div>
             </div>
             <div class="">
-                <a href="#" class="button" id="order-button">ЗАБРОНЮВАТИ</a>
+                <a href="https://t.me/kaifupgrade" class="button" id="order-button">ЗАБРОНЮВАТИ</a>
             </div>
         </div>
     </section>
@@ -170,5 +171,4 @@ wp_head();
     </section>
     <!-- Info Section End-->
     <?php
-//get_sidebar();
 get_footer();

@@ -213,11 +213,10 @@ input::-moz-focus-inner {
 }
 .arrow-1 div {
     position: relative;
-    width: 90px;
-    height: 20px;
+    width: 60px;
+    height: 17px;
     background-color: #FFFFFF;
-    left:0;
-    display: block;
+    left: 0;
 }
 .arrow-1 div::after {
     content: '';
@@ -225,9 +224,9 @@ input::-moz-focus-inner {
     width: 0;
     height: 0;
     border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
-    border-left: 46px solid #FFFFFF;
+    border-bottom: 20px solid transparent;
+    border-left: 35px solid #FFFFFF;
     top: -15px;
-    left: 80px;
+    left: 57px;
 }
 

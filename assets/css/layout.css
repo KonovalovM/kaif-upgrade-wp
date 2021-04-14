@@ -8,24 +8,37 @@ body {
 /* ------------------------------------------------------------------ */
 /* c. Main Section - Main Page
 /* ------------------------------------------------------------------ */
-#main-section {
-    height: -webkit-fill-available;
-    background-size: cover;
-    /*background-attachment: fixed;*/
-}
+
 .fon{
     position: absolute;
     z-index: -1;
     display: block;
 }
+
+.contact-mobile,
+.main-mobile,
+#menu-button-mobile,
+.order-menu {
+    display: none;
+}
+
 .main-menu{
-    margin-top: 105px;
-    margin-left: 146px;
+    margin-left: 11%;
     font-family: Montserrat, serif;
+    background-position: center;
+    background-size: cover;
 }
 .menu-text{
     margin-top: 105px;
     font-size: 14px;
+}
+
+#kaif{
+    font-size: 106px;
+}
+
+#upgrate{
+    font-size: 46px;
 }
 
 .main-name{
@@ -50,13 +63,15 @@ body {
     height: 54px;
     text-align: center;
 }
+
 /* ------------------------------------------------------------------ */
 /* Gallery
 /* ------------------------------------------------------------------ */
 .gallery{
     margin-top: 105px;
-    margin-left: 146px;
-    margin-right: 145px;
+    margin-left: 11%;
+    margin-right: 11%;
+    grid-gap: unset;
     font-family: Montserrat, serif;
 }
 
@@ -66,50 +81,53 @@ body {
     font-size: 60px;
 }
 
-.row{
-    display: flex;
-    margin-bottom: -72%;
+.gallery-row {
+    display: table;
 }
+
 .gallery-image{
-    width: 34%;
-    display: flex;
-    height: fit-content;
-}
-.gallery-image-second{
-    flex-direction: column;
-    width: 32%;
-    height: 50%;
-    margin-left: auto;
+    background-position: center center;
+    background-size: cover;
+    padding-bottom: 25%;
+    display: table-cell;
 }
 
-.gallery-image-second img{
-    width: 100%;
-    height: 38%;
-    object-fit: cover;
+.gallery-row-image {
+    display: grid;
 }
 
-.gallery-image-third{
+.gallery-image-s{
+    padding-bottom: 60%;
+    background-size: cover;
+}
+
+.gallery-row-second{
     display: flex;
 }
-.gallery-image-third img{
+/*.gallery-image-third img{*/
+/*    width: 50%;*/
+/*}*/
+.gallery-image-t{
     width: 50%;
+    background-size: cover;
 }
-.gallery-image-third div{
+.gallery-row-second div{
     font-family: Montserrat;
     width: 50%;
     background-color: #1b1b1b;
     padding-top: 30px;
     padding-left: 45px;
+    padding-bottom: 60px;
 }
 
-.gallery-image-third div li{
+.gallery-row-second div li{
     margin-bottom: 0;
     margin-top: 34px;
 }
 
-.menu-button {
+#menu-button-pc {
     margin-top: 115px;
-    margin-right: 145px;
+    margin-right: 11%;
     display: flex;
     justify-content: flex-end;
 }
@@ -134,8 +152,8 @@ body {
 }
 .blog-row{
     display: flex;
-    margin-left: 146px;
-    margin-right: 145px;
+    margin-left: 11%;
+    margin-right: 11%;
     opacity:0.4;
 }
 
@@ -151,6 +169,7 @@ body {
 
 .blog-background{
     padding: 60px;
+    margin-bottom: 20px;
 }
 
 .blog-title{
@@ -159,6 +178,7 @@ body {
 }
 .blog-image-second{
     width: 50%;
+    margin-bottom: auto;
 }
 
 .blog-image-second div{
@@ -184,12 +204,26 @@ body {
     align-items: center;
 }
 
-#go, #order-button{
+#order-button{
     font-family: Ustroke;
+    margin-bottom: 0px;
+    font-size: 22px;
+}
+
+#order-go{
+    font-family: Ustroke;
+    font-size: 46px;
+    margin-bottom: 0px;
+}
+
+#order-text{
+    margin-top: 0px;
+    font-size: 24px;
 }
 
 .arrow-1{
-    left: -70px;
+    left: -40px;
+    display: block;
 }
 
 /* ------------------------------------------------------------------ */
@@ -208,10 +242,11 @@ body {
 /* ------------------------------------------------------------------ */
 
 footer {
+    color: #FFFFFF;
     font-size: 14px;
     border-top: 1px solid #c4caca;
 }
-footer a, footer a:visited { color: #6A747C; }
+
 footer a:hover { color: #11ABB0; }
 
 footer .footer {
@@ -243,7 +278,7 @@ footer .footer-nav li {
    margin-right: 20px;
    margin-left: 20px;
 }
-footer .footer-nav a { color: #7B858E; }
+
 footer .footer-nav a:hover { color: #313131; }
 
 /* social links */
@@ -257,7 +292,7 @@ footer .footer-social li {
    margin-left: 24px;
    margin-right: 24px;
 }
-footer .footer-social li a { color: #7B858E; }
+
 footer .footer-social li a:hover { color: #313131; }
 
 /* copyright */
